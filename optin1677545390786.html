@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<script>
+
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+      var results = regex.exec(location.search);
+      return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    $preview = getParameterByName("preview");
+
+
+    if( $preview == "" ){
+      // do nothing
+    } else if( $preview == "control" ){
+      document.cookie = "lander-ab-tests-58446548=lander_control";
+    } else{
+      document.cookie = "lander-ab-tests-58446548=lander_" + $preview;
+    }
+
+  </script>
+<link rel="stylesheet" media="screen" href="https://app.clickfunnels.com/assets/lander.css" />
+<script type="text/javascript" src="https://static.clickfunnels.com/clickfunnels/landers/tmp/s6a5oo34m7vhyia5.js" charset="UTF-8"></script>
+<style>
+    #IntercomDefaultWidget{
+      display: none;
+    }
+    #Intercom{
+      display:none;
+    }
+  </style>
+<meta name="nodo-proxy" content="html" />
+</head>
+<body>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"7a2c3d8cab0a33eb","token":"405b708a9b0242e88fda34dc27903686","version":"2023.2.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '942142180153115');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=942142180153115&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
